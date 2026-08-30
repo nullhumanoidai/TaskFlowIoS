@@ -1,0 +1,54 @@
+:root {
+  --bg: #ffffff;
+  --fg: #1c1c1e;
+  --muted: #6b6b70;
+  --rule: #e4e4e7;
+  --accent: #2f6df6;
+  --card: #f7f7f8;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #131316;
+    --fg: #ececf0;
+    --muted: #9b9ba3;
+    --rule: #2c2c31;
+    --accent: #7ba4ff;
+    --card: #1c1c20;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+.wrap { max-width: 46rem; margin: 0 auto; padding: 2.5rem 1.25rem 5rem; }
+header { border-bottom: 1px solid var(--rule); padding-bottom: 1.25rem; margin-bottom: 2rem; }
+header .app { font-size: .8rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin: 0 0 .35rem; }
+h1 { font-size: 1.9rem; line-height: 1.2; margin: 0 0 .5rem; letter-spacing: -.02em; }
+.updated { color: var(--muted); font-size: .875rem; margin: 0; }
+h2 { font-size: 1.15rem; margin: 2.25rem 0 .6rem; letter-spacing: -.01em; }
+h3 { font-size: 1rem; margin: 1.5rem 0 .4rem; }
+p, li { color: var(--fg); }
+ul { padding-left: 1.15rem; }
+li { margin: .3rem 0; }
+a { color: var(--accent); }
+.lead { font-size: 1.05rem; }
+.card { background: var(--card); border: 1px solid var(--rule); border-radius: .75rem; padding: 1rem 1.15rem; margin: 1.25rem 0; }
+.card p:first-child { margin-top: 0; }
+.card p:last-child { margin-bottom: 0; }
+table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: .95rem; }
+th, td { text-align: left; vertical-align: top; padding: .6rem .5rem; border-bottom: 1px solid var(--rule); }
+th { color: var(--muted); font-weight: 600; font-size: .8rem; text-transform: uppercase; letter-spacing: .05em; }
+.tablewrap { overflow-x: auto; }
+nav.crumbs { margin-bottom: 1.5rem; font-size: .9rem; }
+nav.crumbs a { text-decoration: none; }
+footer { border-top: 1px solid var(--rule); margin-top: 3rem; padding-top: 1.25rem; color: var(--muted); font-size: .875rem; }
+footer a { margin-right: 1rem; }
+.tiles { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); margin-top: 2rem; }
+.tile { display: block; text-decoration: none; color: inherit; background: var(--card); border: 1px solid var(--rule); border-radius: .75rem; padding: 1.25rem; }
+.tile:hover { border-color: var(--accent); }
+.tile strong { display: block; font-size: 1.05rem; margin-bottom: .3rem; }
+.tile span { color: var(--muted); font-size: .9rem; }
